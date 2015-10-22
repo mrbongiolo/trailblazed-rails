@@ -1,0 +1,4 @@
+<h2><%= title %></h2>
+<%= body %>
+<hr>
+<%= link_to "Back", posts_path %> | <%= link_to "Edit Post", edit_post_path(@model) %> | <%= link_to "Destroy", post_path(@model), method: :delete %> | <%= link_to "New Post", new_post_path %>
