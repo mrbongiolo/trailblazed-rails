@@ -9,7 +9,5 @@ class Comment::Cell < Cell::Concept
 
   private
 
-    def post
-      model.post
-    end
+    property :post
 end
