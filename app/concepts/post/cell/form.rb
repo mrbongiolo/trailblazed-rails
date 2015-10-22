@@ -8,7 +8,10 @@ class Post::Cell::Form < Post::Cell
 
   private
 
-    def action_url
-      options[:url]
+    property :contract
+
+    def page_title
+      return "Edit Post" if model.model.persisted?
+      "New Post"
     end
 end

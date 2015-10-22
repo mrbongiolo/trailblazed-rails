@@ -1,4 +1,12 @@
 <h2><%= title %></h2>
-<%= body %>
+<p>
+  <%= body %>
+</p>
+<br>
+<ul>
+  <%= concept("comment/cell", collection: model.comments) %>
+</ul>
+<br>
+<%= link_to "New Comment", new_post_comment_path(model) %>
 <hr>
-<%= link_to "Back", posts_path %> | <%= link_to "Edit Post", edit_post_path(@model) %> | <%= link_to "Destroy", post_path(@model), method: :delete %> | <%= link_to "New Post", new_post_path %>
+<%= link_to "Back", posts_path %> | <%= link_to "Edit Post", edit_post_path(model) %> | <%= link_to "Destroy", post_path(model), method: :delete %> | <%= link_to "New Post", new_post_path %>

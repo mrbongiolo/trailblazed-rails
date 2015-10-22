@@ -6,10 +6,14 @@ class PostsController < ApplicationController
 
   def show
     present Post::Update
+
+    render text: concept("post/cell", @model), layout: true
   end
 
   def new
     form Post::Create
+
+    render_form
   end
 
   def create
@@ -22,6 +26,8 @@ class PostsController < ApplicationController
 
   def edit
     form Post::Update
+
+    render_form
   end
 
   def update
@@ -36,4 +42,10 @@ class PostsController < ApplicationController
     run Post::Delete
     redirect_to posts_path
   end
+
+  private
+
+    def render_form
+      render text: concept("post/cell/form", @operation), layout: true
+    end
 end
