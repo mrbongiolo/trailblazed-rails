@@ -10,10 +10,6 @@ class Comment::Cell::Form < Comment::Cell
 
     property :contract
 
-    def post
-      model.model.post
-    end
-
     def page_title
       return "Edit Comment" if model.model.persisted?
       "New Comment"

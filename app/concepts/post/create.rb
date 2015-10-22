@@ -4,15 +4,8 @@ class Post::Create < Trailblazer::Operation
   model Post, :create
 
   contract do
-
-    property :title,
-      validates: {
-        presence: true
-      }
-    property :body,
-      validates: {
-        presence: true
-      }
+    property :title, validates: { presence: true }
+    property :body, validates: { presence: true }
   end
 
   def process(params)

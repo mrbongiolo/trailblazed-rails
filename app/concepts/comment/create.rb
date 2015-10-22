@@ -1,5 +1,7 @@
 class Comment::Create < Trailblazer::Operation
 
+  attr_reader :post
+
   contract do
 
     # this is needed because we didn't use include Model on this Operation
