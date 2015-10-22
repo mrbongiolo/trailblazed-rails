@@ -1,0 +1,4 @@
+<li>
+  <b><%= author %></b> - <%= link_to "Edit", edit_post_comment_path(post, model) %> - <%= link_to "Remove", post_comment_path(post, model), method: :delete %>
+  <p><%= message %></p>
+</li>
