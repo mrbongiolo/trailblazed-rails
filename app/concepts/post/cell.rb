@@ -6,12 +6,4 @@ class Post::Cell < Cell::Concept
   def show
     render
   end
-
-  def list
-    render :list
-  end
-
-  def form
-    concept("post/cell/form", model)
-  end
 end

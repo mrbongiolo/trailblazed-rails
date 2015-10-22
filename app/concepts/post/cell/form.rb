@@ -9,6 +9,6 @@ class Post::Cell::Form < Post::Cell
   private
 
     def action_url
-      @options[:url]
+      options[:url]
     end
 end
